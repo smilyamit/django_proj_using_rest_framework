@@ -28,17 +28,19 @@ def add_car(request):
 
 # POST request using class based views
 class CarView(View):
+    form_class = CarForm    # class variables
+    template_name = "api_app/carName.html"
     def get(self, request):
-        form = CarForm()
+        form = self.form_class()
         context = {"form": form}
 
-        return render(request, "api_app/carName.html", context)
+        return render(request, self.template_name, context)
 
     def post(self, request):
-        form = CarForm(request.POST)
+        form = self.form_class(request.POST)
         if form.is_valid():
             form.save()
         else:
-            form = CarForm()
+            form = self.form_class()
         context = {'form': form}
-        return render(request, "api_app/carName.html", context)
+        return render(request, self.template_name, context)

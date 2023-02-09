@@ -7,7 +7,7 @@ class Car(models.Model):
 
     class Meta:    # This is optional and is used to change the name of the table in the database
         db_table = 'car'
-        verbose_name = 'Specialcar'
+        verbose_name = 'Special Car'
 
     def __str__(self):
         return self.car_name

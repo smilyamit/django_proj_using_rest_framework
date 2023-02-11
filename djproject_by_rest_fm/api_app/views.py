@@ -26,7 +26,7 @@ def add_car(request):
     return render(request, 'api_app/carName.html', context)
 
 
-# POST request using class based views
+# GET and POST request using class based views
 class CarView(View):
     form_class = CarForm    # class variables
     template_name = "api_app/carName.html"

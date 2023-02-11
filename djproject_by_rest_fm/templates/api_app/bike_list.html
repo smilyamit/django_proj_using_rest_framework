@@ -1,0 +1,17 @@
+{% extends "api_app/base.html" %}
+{% block content %}
+    <a href="{% url 'car_name'  %}">Go back to Car Related Page</a>
+    <h1>Bike List</h1>
+        {% if bike_list %}
+
+
+        {% for bike in  bike_list %}
+           <h3> Bike Name: {{ bike }} </h3> <p> Model: {{ bike.bike_model }} </p> <p> Color: {{ bike.bike_color }} </p>
+        {% endfor %}
+
+
+        {% else %}
+        <p>There is no Bike List available</p>
+        {% endif %}
+
+{% endblock content %}

@@ -1,15 +1,27 @@
 from django.db import models
 
+
 class Car(models.Model):
     car_name = models.CharField(max_length=100)
     car_model = models.CharField(max_length=100)
     car_color = models.CharField(max_length=20)
 
-    class Meta:    # This is optional and is used to change the name of the table in the database
+    class Meta:  # This is optional and is used to change the name of the table in the database
         db_table = 'car'
         verbose_name = 'Special Car'
 
     def __str__(self):
         return self.car_name
-    
 
+
+class Bike(models.Model):
+    bike_name = models.CharField(max_length=100)
+    bike_model = models.CharField(max_length=100)
+    bike_color = models.CharField(max_length=20)
+
+    class Meta:
+        db_table = 'bike'
+        verbose_name = 'Bike List'
+
+    def __str__(self):
+        return self.bike_name

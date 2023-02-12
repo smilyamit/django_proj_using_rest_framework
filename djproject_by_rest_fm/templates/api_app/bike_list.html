@@ -1,12 +1,12 @@
 {% extends "api_app/base.html" %}
 {% block content %}
-    <a href="{% url 'car_name'  %}">Go back to Car Related Page</a>
+    <a href="{% url 'motor_bike_related'  %}">Go back to Motor Bike Related Page</a>
     <h1>Bike List</h1>
         {% if bike_list %}
 
 
         {% for bike in  bike_list %}
-           <h3> Bike Name: {{ bike }} </h3> <p> Model: {{ bike.bike_model }} </p> <p> Color: {{ bike.bike_color }} </p>
+           <h3> Motor Bike Name: {{ bike }} </h3> <p> Model: {{ bike.bike_model }} </p> <p> Color: {{ bike.bike_color }} </p>
         {% endfor %}
 
 

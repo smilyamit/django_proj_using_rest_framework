@@ -1,0 +1,17 @@
+{% extends "api_app/base.html" %}
+{% block content %}
+    <a href="{% url 'car_name'  %}">Go back to Car Related Page</a>
+    <h1>Motor Bike List</h1>
+        {% if motorbike_list %}      {# motorbike_list comes from cntx from genericViews.py, _list comes from MultipleObjectTemplateResponseMixin  #}
+
+
+        {% for x in  motorbike_list %}
+           <h3> Bike Name: {{ x.motor_bike_name }} </h3> <p> Model: {{ x.motor_bike_model }} </p> <p> Color: {{ x.motor_bike_color }} </p>
+        {% endfor %}
+
+
+        {% else %}
+        <p>There is no Motor Bike List available</p>
+        {% endif %}
+
+{% endblock content %}

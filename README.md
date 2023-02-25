@@ -5,7 +5,7 @@
   In Class based views: GET and POST method shown
 
 ## An api with rest framework
-  > __Note__ In rf Functional based views: GET and POST method shown  <br />
+  > __In rf Functional based views: GET and POST method shown__   <br />
   In rf Class based views: GET and POST PUT, DELETE method shown <br />
   In rf generic based views: All are actions. create, retrieve, update, destroy actions are shown. Action means they are automated function, u cannot add extra method <br />
   In rf viewsets.ViewSet: we can create any methods like list (create), retrieve (get) , update any methods. <br />
